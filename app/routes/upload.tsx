@@ -67,7 +67,7 @@ const upload = () => {
         data.feedback=JSON.parse(feedbackText) // storing feedback from ai to data obj
         await kv.set(`resume:${uuid}`,JSON.stringify(data));
         setStatusText("Analysis complete,redirecting...");
-        console.log(data);
+        navigate(`/resume/${uuid}`)
         
 
     }
